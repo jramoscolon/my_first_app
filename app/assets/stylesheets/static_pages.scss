@@ -1,3 +1,112 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+clearfix:after {
+    display: block;
+    visibility: hidden;
+    height: 0;
+    clear: both;
+    content: ".";
+}
+
+h1, h2, h3, h4 {
+	font-family: "source-sans-pro",sans-serif;
+	font-weight: 600;
+	text-transform: uppercase;
+
+}
+
+h1 {
+	font-size: 2em;
+}
+
+p {
+	font-family: "source-sans-pro",sans-serif;
+	font-weight: 400;
+}
+
+.navbar {
+	border-radius: 0px;
+	margin-bottom: 0;
+}
+
+.navbar-inverse {
+	background: rgba(21,20,15,1);
+	background: -moz-linear-gradient(top, rgba(21,20,15,1) 0%, rgba(53,50,45,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(21,20,15,1)), color-stop(100%, rgba(53,50,45,1)));
+	background: -webkit-linear-gradient(top, rgba(21,20,15,1) 0%, rgba(53,50,45,1) 100%);
+	background: -o-linear-gradient(top, rgba(21,20,15,1) 0%, rgba(53,50,45,1) 100%);
+	background: -ms-linear-gradient(top, rgba(21,20,15,1) 0%, rgba(53,50,45,1) 100%);
+	background: linear-gradient(to bottom, rgba(21,20,15,1) 0%, rgba(53,50,45,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#15140f', endColorstr='#35322d', GradientType=0 );
+}
+
+.navbar-header a {
+	font-family: "kinescope",sans-serif;
+	font-weight: 400;
+	font-size: 2em;
+}
+
+.navbar-inverse .navbar-brand {
+	background: rgba(243,226,199,1);
+	background: -moz-linear-gradient(top, rgba(243,226,199,1) 0%, rgba(193,158,103,1) 50%, rgba(182,141,76,1) 51%, rgba(233,212,179,1) 100%);
+	background: -webkit-gradient(left top, left bottom, background-stop(0%, rgba(243,226,199,1)), background-stop(50%, rgba(193,158,103,1)), background-stop(51%, rgba(182,141,76,1)), background-stop(100%, rgba(233,212,179,1)));
+	background: -webkit-linear-gradient(top, rgba(243,226,199,1) 0%, rgba(193,158,103,1) 50%, rgba(182,141,76,1) 51%, rgba(233,212,179,1) 100%);
+	background: -o-linear-gradient(top, rgba(243,226,199,1) 0%, rgba(193,158,103,1) 50%, rgba(182,141,76,1) 51%, rgba(233,212,179,1) 100%);
+	background: -ms-linear-gradient(top, rgba(243,226,199,1) 0%, rgba(193,158,103,1) 50%, rgba(182,141,76,1) 51%, rgba(233,212,179,1) 100%);
+	background: linear-gradient(to bottom, rgba(243,226,199,1) 0%, rgba(193,158,103,1) 50%, rgba(182,141,76,1) 51%, rgba(233,212,179,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startbackgroundstr='#f3e2c7', endbackgroundstr='#e9d4b3', GradientType=0 );
+
+	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+    
+}
+
+.jumbotron {
+	height: 400px;
+	background-image: url('bike_banner2000x500.jpg');
+	background-size: cover;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+	padding: 20px 0px;
+}
+
+.bottom-cushion {
+	padding-bottom: 60px;
+}
+
+.form-control {
+	background-color: transparent;
+
+}
+
+.copyright {
+	background-color: #222222;
+	width: 105%;
+	padding: 10px 0px;
+	position: fixed;
+	bottom: 0;
+	left: -20px;
+}
+
+/*** Text formatting for footer ***/
+
+footer h4 {
+	color: LightGray;
+	font-weight: 300;
+}
+
+.copyright p {
+	color: gray;
+	text-transform: uppercase;
+	text-align: center;
+	padding-top: 5px;
+	
+}

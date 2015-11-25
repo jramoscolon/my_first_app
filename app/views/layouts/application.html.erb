@@ -2,13 +2,99 @@
 <html>
 <head>
   <title>MyFirstApp</title>
+  <!-- Typekit embed code -->
+  <script src="https://use.typekit.net/tjf3rtq.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <!-- Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <%= csrf_meta_tags %>
+  <!-- Bootstrap for mobile responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+	<header>
+			<nav class="navbar navbar-inverse">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="#">Bike Graz</a>
+					</div>
+					<ul class="nav navbar-nav pull-right">
+						<li><a href="#">About Us</a></li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Bikes<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+					            <li><a href="#">Street Bike</a></li>
+					            <li><a href="#">Racing Bike</a></li>
+					            <li><a href="#">Cruising Bike</a></li>
+					         </ul>
+						</li>
+						<li><a href="">Gallery</a></li>
+						<li><a href="">Contact</a></li>
+					</ul>
+
+				</div>
+				
+			</nav>
+		</header>
+	<!-- <h1>Welcome to Bike Graz</h1>
+	<h2>Your source for used bikes in Graz, Austria</h2> -->
 
 <%= yield %>
+
+	<footer class="footer">
+		<div class="container-fluid bottom-cushion clearfix">
+			<div class="row">
+				<div class="col-md-2 col-lg-2 col-md-offset-1">
+					<h4>Site Navigation</h4>
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Bikes</a>
+							<ul>
+								<li><a href="">Street</a></li>
+								<li><a href="">Racing</a></li>
+								<li><a href="">Cruising</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</div><!-- End of first column navigation -->
+					
+				<div class="col-md-2 col-lg-2 col-md-offset-1">
+					<h4>Our Partners</h4>
+					<ul>
+						<li><a href="">Partner 1</a></li>
+						<li><a href="">Partner 2</a></li>
+						<li><a href="">Partner 3</a></li>
+						<li><a href="">Partner 4</a></li>
+						<li><a href="">Partner 5</a></li>
+					</ul>
+				</div><!-- End of second column Partners -->
+
+				<div class="col-md-6 col-lg-6">
+					<h4>Subscribe to our Newsletter</h4>
+					<form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+							<input type="email" class="form-control" id="email" placeholder="Enter email">
+						</div>
+						<button type="submit" class="btn btn-default">Sign up</button>
+					</form>
+				</div><!-- End of third column Newsletter -->
+				
+			</div><!-- End of row div -->
+			<div class="copyright">
+				<div class="container">
+					<p>&copy;2016 Jose M. Ramos. AKA, The Aprentice</p>
+				</div>
+			</div>
+
+		</div><!-- End of container for footer -->
+
+	</footer>
 
 </body>
 </html>
