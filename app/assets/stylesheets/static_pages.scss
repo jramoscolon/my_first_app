@@ -3,6 +3,14 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+/** Nice colors to use
+*** # (light gray)
+*** Gold #FFD700
+*** GoldenRod (Gold) #DAA520
+*** DarkGoldenRod (Dark gold) #B8860B
+*** Gainsboro (Light Gray) #DCDCDC
+**/
+
 clearfix:after {
     display: block;
     visibility: hidden;
@@ -11,9 +19,21 @@ clearfix:after {
     content: ".";
 }
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 260px; /* Added 50px for the bottom margin */
+  background: white url('bg_noise_light.png') repeat 0 0;
+}
+
 h1, h2, h3, h4 {
 	font-family: "source-sans-pro",sans-serif;
 	font-weight: 600;
+	color: #B8860B;
 	text-transform: uppercase;
 
 }
@@ -43,6 +63,58 @@ p {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#15140f', endColorstr='#35322d', GradientType=0 );
 }
 
+.navbar-inverse .navbar-nav li a {
+	color: DarkGoldenRod;
+}
+
+/************Paste to fix Menu ****************/
+
+.navbar-inverse .navbar-brand:focus,.navbar-inverse .navbar-brand:hover {
+    color: #fff;
+    background-color: transparent
+}
+
+.navbar-inverse .navbar-text {
+    color: DarkGoldenRod
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: DarkGoldenRod
+}
+
+.navbar-inverse .navbar-nav>li>a:focus,.navbar-inverse .navbar-nav>li>a:hover {
+    color: Gold;
+    background-color: transparent
+}
+
+.navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav>.active>a:focus,.navbar-inverse .navbar-nav>.active>a:hover {
+    color: Gold;
+    background-color: #080808
+}
+
+.navbar-inverse .navbar-nav>.disabled>a,.navbar-inverse .navbar-nav>.disabled>a:focus,.navbar-inverse .navbar-nav>.disabled>a:hover {
+    color: #444;
+    background-color: transparent
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: #333
+}
+
+.navbar-inverse .navbar-toggle:focus,.navbar-inverse .navbar-toggle:hover {
+    background-color: #333
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: Gold
+}
+
+.navbar-inverse .navbar-nav>.open>a,.navbar-inverse .navbar-nav>.open>a:focus,.navbar-inverse .navbar-nav>.open>a:hover {
+    color: Gold;
+}
+
+/************ End paste *************/
+
 .navbar-header a {
 	font-family: "kinescope",sans-serif;
 	font-weight: 400;
@@ -70,16 +142,32 @@ p {
 	background-size: cover;
 }
 
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: black;
-	padding: 20px 0px;
+.bike-image {
+	width: 400px;
+	float: left;
+	margin-right: 15px;
+	margin-bottom: 15px;
+	border: 2px solid DarkGray;
 }
 
-.bottom-cushion {
-	padding-bottom: 60px;
+.imagedropshadow { 
+	padding: 5px; 
+	border: solid 1px #CCC; 
+	-moz-box-shadow: 1px 1px 5px #999; 
+	-webkit-box-shadow: 1px 1px 5px #999; 
+	box-shadow: 1px 1px 5px #999; 
+}
+
+.footer {
+  position: absolute;
+  padding: 15px 0px;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 50px;
+  /* Set the fixed height of the footer here */
+  /* Value must be the same as for the html selector above */
+  height: 190px;
+  background-color: black;
 }
 
 .form-control {
@@ -103,10 +191,35 @@ footer h4 {
 	font-weight: 300;
 }
 
+footer ul {
+	list-style: none;
+}
+
+footer ul li a {
+	display: inline-block;
+	color: Gainsboro;
+}
+
+footer ul li a:hover {
+	color: DarkGoldenRod;
+}
+
 .copyright p {
 	color: gray;
+	height: 30px;
 	text-transform: uppercase;
 	text-align: center;
 	padding-top: 5px;
 	
+}
+
+.metal-emblem {
+	width: 133px;
+	height: 100px;
+	position: absolute;
+	right: 100px;
+	top: -55px;
+	background: url('emblem.png') no-repeat transparent;
+	background-size: 100%;
+	z-index: 1000;
 }
