@@ -115,6 +115,11 @@ p {
 
 /************ End paste *************/
 
+ .navbar>.container .navbar-brand,.navbar>.container-fluid .navbar-brand {
+        margin-left: 0px;
+ }
+
+
 .navbar-header a {
 	font-family: "kinescope",sans-serif;
 	font-weight: 400;
@@ -157,6 +162,116 @@ p {
 	-webkit-box-shadow: 1px 1px 5px #999; 
 	box-shadow: 1px 1px 5px #999; 
 }
+
+/**********Styles for carousel*************/
+
+#home {
+	top: 0;
+}
+
+.contentCarousel {
+	top: 0;
+	padding: 0;
+}
+
+.contentCarousel h1, h2, h3 {
+	color: white;
+}
+
+.container-fluid {	
+	margin: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.carousel-inner h1, h2, h3, h4, p {
+	text-align: left;
+}
+
+.carousel-inner h1, h2, h3 {
+	font-family: "almaq-rough",sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	color: #white;
+	margin-bottom: 0px;
+}
+
+.carousel-inner h1 {
+	font-size: 3em;
+}
+
+.carousel-inner h2 {
+	font-size: 4em;
+}
+
+.carousel-inner p {
+	color: #white;
+	font-size: 1.2em;
+	margin-bottom: 30%;
+}
+
+.carousel-caption {
+	left: 10%;
+}
+
+.carousel-caption h3 {
+	color: white;
+}
+
+/******************* Thumbnails Begin ********************/
+
+.thumbnail {
+	height: 190px;
+	background: #4c4c4c; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, #4c4c4c 0%, #131313 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, #4c4c4c 0%,#131313 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, #4c4c4c 0%,#131313 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	border: none;
+	border-radius: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.thumbnail h4 {
+	font-family: "almaq-rough",sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	position: relative;
+	color: white;
+}
+
+.caption {
+	position: absolute;
+	z-index: 1000;
+}
+
+.less-padding {
+	padding-left: 1px;
+	padding-right: 1px;
+}
+
+#image-container {
+	z-index: -1;
+}
+
+.thumb-image {
+	float: right;
+}
+
+.btn-default {
+	color: white;
+	background-color: transparent;
+}
+
+.btn-default:hover {
+    color: #333;
+    background-color: Gold;
+    border-color: #adadad
+}
+
+
+/******************* Thumbnails Ends *********************/
 
 .footer {
   position: absolute;
