@@ -174,7 +174,7 @@ p {
 	padding: 0;
 }
 
-.contentCarousel h1, h2, h3 {
+.contentCarousel h1, h2 {
 	color: white;
 }
 
@@ -220,7 +220,7 @@ p {
 
 /******************* Thumbnails Begin ********************/
 
-.thumbnail {
+.thumbnail-home {
 	height: 190px;
 	background: #4c4c4c; /* Old browsers */
 	background: -moz-linear-gradient(-45deg, #4c4c4c 0%, #131313 100%); /* FF3.6-15 */
@@ -233,7 +233,7 @@ p {
 	overflow: hidden;
 }
 
-.thumbnail h4 {
+.thumbnail-home h4 {
 	font-family: "almaq-rough",sans-serif;
 	font-style: normal;
 	font-weight: 400;
@@ -241,7 +241,7 @@ p {
 	color: white;
 }
 
-.caption {
+.caption-home {
 	position: absolute;
 	z-index: 1000;
 }
