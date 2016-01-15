@@ -141,6 +141,11 @@ p {
     
 }
 
+.navbar-form {
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
 .jumbotron {
 	height: 400px;
 	background-image: url('bike_banner2000x500.jpg');
@@ -220,6 +225,10 @@ a.carousel-control:hover {
 
 .carousel-caption h3 {
 	color: white;
+}
+
+.carousel-inner > .item > img {
+   margin: 0 auto;
 }
 
 /******************* Thumbnails Begin ********************/

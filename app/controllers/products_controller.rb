@@ -6,6 +6,7 @@ class ProductsController < ApplicationController
   def index
     if params[:q]
       search_term = params[:q]
+      # The next IF statement checks to see if using a development or produciton environment
       if Rails.env.development?
         @products = Product.where("name LIKE ?", "%#{search_term}%")
       else
@@ -14,14 +15,7 @@ class ProductsController < ApplicationController
     else
       @products = Product.all
     end
-    # Uncomment here
-    # if params[:q]
-    #   search_term = params[:q]
-    #   @products = Product.where("name ILIKE ?", "%#{search_term}%")
-    # else
-    #   @products = Product.all
-    # end
-    # down to here.
+
     #@products = Product.all
   end
 
