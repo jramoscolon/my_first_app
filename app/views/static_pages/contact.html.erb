@@ -4,9 +4,10 @@
 
 <%= flash[:notice] %>
 
-<%= form_tag("/static_pages/thank_you") do %>
+
 <div class="row">
-	<div class="col-md-4">
+	<div class="col-md-4 col-sm-6">
+		<%= form_tag("/static_pages/thank_you") do %>
 		<div class="form-group">
 			<%= label_tag :name, "Name" %>
 			<%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
@@ -19,10 +20,21 @@
 			<%= label_tag :message, "Message" %>
 			<%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
 		</div>
-	</div>
-</div>
+		<%= submit_tag "Send", class: "btn btn-default" %>
+	<% end %>
+	</div><!-- End of column -->
 
-<%= submit_tag "Send", class: "btn btn-default" %>
-<% end %>
+	<div class="name col-md-8 col-sm-6">
+          <h4>We are the custom bikes experts!</h4>
+          <p>
+            Would you like to know more about our services or company? Or perhaps you may have a suggestion or two about how we can make an awesome company even better. In any case, please fill out the form below and we’ll get back to you as soon as humanly possible. We’d love to hear from you!
+          </p>
+          <p><span class="glyphicon glyphicon-phone-alt"></span>Tel: 787.237.3888</p>
+          <p><a href="mailto:jose@train-your-brain.me"><span class="glyphicon glyphicon-envelope"></span>Email: jose(at)train-your-brain.me</a></p>
+          <p><span class="glyphicon glyphicon-map-marker"></span>Address: San Juan, Puerto Rico</p>
+        </div><!-- Name ends here -->
+</div><!-- End of row -->
+
+
 
 </div><!-- End of main container -->
