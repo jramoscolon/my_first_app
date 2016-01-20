@@ -30,6 +30,10 @@ body {
   background: white url('bg_noise_light.png') repeat 0 0;
 }
 
+.no-bottom {
+	margin-bottom: 0px;
+}
+
 h1, h2, h3, h4 {
 	font-family: "source-sans-pro",sans-serif;
 	font-weight: 600;

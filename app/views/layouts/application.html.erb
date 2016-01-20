@@ -57,6 +57,12 @@
 				
 			</nav>
 		</header>
+		<% if notice %>
+			<div class="alert alert-info no-bottom" role="alert"><%= notice %></div>
+		<% end %>
+		<% if alert %>
+			<div class="alert alert-danger no-bottom" role="alert"><%= alert %></div>
+		<% end %>
 	<!-- <h1>Welcome to Bike Graz</h1>
 	<h2>Your source for used bikes in Graz, Austria</h2> -->
 
