@@ -1,8 +1,12 @@
-<p id="notice"><%= notice %></p>
+<% if alert %>
+  <div class="alert alert-info no-bottom" role="alert"><%= notice %></div>
+<% end %>
+
+<div class="container">
 
 <h1>Listing Users</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>First name</th>
@@ -16,9 +20,9 @@
       <tr>
         <td><%= user.first_name %></td>
         <td><%= user.last_name %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', user, :class => 'btn btn-default' %></td>
+        <td><%= link_to 'Edit', edit_user_path(user), :class => 'btn btn-default' %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-default' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +30,6 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+<p class="btn btn-default"><%= link_to 'New User', new_user_path %></p>
+
+</div>
