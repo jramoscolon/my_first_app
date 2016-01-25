@@ -8,6 +8,7 @@
       <strong>Description:</strong>
       <%= @product.description %>
     </p>
+    <p>Average Rating: <div class="rated" data-score= "<%= @product.average_rating %>"></div></p>
     <p>
       <strong>Colour:</strong>
       <%= @product.colour %>
@@ -39,3 +40,6 @@
 </div><!-- End of row -->
 
 </div><!-- End of container -->
+
+<%= render 'new_comment' %>
+<%= render 'comments' %>
