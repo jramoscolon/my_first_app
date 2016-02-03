@@ -16,8 +16,12 @@
           <hr>
           <h4><%= product.price %></h4>
           <p class="btn btn-default"><%= link_to 'Show', product %></p>
-          <p class="btn btn-default"><%= link_to 'Edit', edit_product_path(product) %></p>
+          <% if can? :update, @product %>
+            <p class="btn btn-default"><%= link_to 'Edit', edit_product_path(product) %></p>
+          <% end %>
+          <% if can? :destroy, @product %>
           <p class="btn btn-default"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+          <% end %>
         </div><!-- End of caption class -->
       </div><!-- End of thumbnail -->
     </div><!-- End of column -->
@@ -30,9 +34,11 @@
 
 <br>
 <div class="container">
+  <% if can? :create, @product %>
   <btn class="btn btn-default">
     <%= link_to 'New Product', new_product_path %>
   </btn>
+  <% end %>
   
 </div>
 

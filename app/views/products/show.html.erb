@@ -30,9 +30,11 @@
   <%= @product.image_url %>
 </p> -->
 
-<button class="btn btn-default">
-  <%= link_to 'Edit', edit_product_path(@product) %>
-</button>
+<% if can? :update, @product %>
+  <button class="btn btn-default">
+    <%= link_to 'Edit', edit_product_path(@product) %>
+  </button>
+<% end %>
 <button class="btn btn-default">
   <%= link_to 'Back', products_path %>
 </button>
