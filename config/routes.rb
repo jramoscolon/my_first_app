@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # devise_for :users
-  devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
+  devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}, :controllers => { :registrations => "user_registrations" }
   resources :users
   resources :products do
     resources :comments
@@ -19,8 +19,8 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'static_pages#landing_page'
-  # root 'static_pages#index'
+  # root 'static_pages#landing_page'
+  root 'static_pages#index'
 
   resources :orders, only: [:index, :show, :create, :destroy]
 
