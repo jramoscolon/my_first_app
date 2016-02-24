@@ -14,7 +14,7 @@
           <p><%= product.description %></p>
           <p><%= product.colour %></p>
           <hr>
-          <h4><%= product.price %></h4>
+          <h4><%= number_to_currency(product.price.to_d/100) %></h4>
           <p class="btn btn-default"><%= link_to 'Show', product %></p>
           <% if can? :update, @product %>
             <p class="btn btn-default"><%= link_to 'Edit', edit_product_path(product) %></p>
