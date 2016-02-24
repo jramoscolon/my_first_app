@@ -18,6 +18,20 @@
       <%= @product.price %>
     </p>
     <hr>
+    <p>
+      <%= form_tag "/payments/create" do %>
+        <%= render partial: "shared/stripe_checkout_button" %>
+      <% end %>
+    </p>
+      <% if can? :update, @product %>
+        <button class="btn btn-default">
+            <%= link_to 'Edit', edit_product_path(@product) %>
+          </button>
+      <% end %>
+
+      <button class="btn btn-default">
+        <%= link_to 'Back', products_path %>
+      </button>
   </div><!-- End of first col -->
   <div class="col-md-6">
     <div class="img-responsive">
@@ -30,14 +44,8 @@
   <%= @product.image_url %>
 </p> -->
 
-<% if can? :update, @product %>
-  <button class="btn btn-default">
-    <%= link_to 'Edit', edit_product_path(@product) %>
-  </button>
-<% end %>
-<button class="btn btn-default">
-  <%= link_to 'Back', products_path %>
-</button>
+
+
 
 </div><!-- End of row -->
 
