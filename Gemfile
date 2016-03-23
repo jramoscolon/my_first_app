@@ -25,6 +25,17 @@ gem 'cancancan'
 gem 'will_paginate', '~> 3.1'
 gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
 gem 'stripe'
+# gem 'brakeman', '~> 3.2', '>= 3.2.1'
+
+# Brakeman
+# gem cert --add <(curl -Ls https://raw.github.com/presidentbeef/brakeman/master/brakeman-public_cert.pem)
+
+
+# ruby_parser, etc.
+# gem cert --add <(curl -Ls http://www.zenspider.com/~ryan/gem-public_cert.pem)
+
+# multijson
+# gem cert --add <(curl -Ls https://raw.githubusercontent.com/intridea/multi_json/master/certs/rwz.pem)
 
 
 
