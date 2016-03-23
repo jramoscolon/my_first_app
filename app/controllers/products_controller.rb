@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   load_and_authorize_resource
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+  respond_to :json, :html
 
   # GET /products
   # GET /products.json
@@ -17,6 +18,7 @@ class ProductsController < ApplicationController
       @products = Product.all
     end
 
+    respond_with @products
     #@products = Product.all
   end
 
