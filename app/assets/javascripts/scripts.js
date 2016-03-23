@@ -10,5 +10,7 @@ $(function () {
       }
     });
 
+    $('.img-zoom').elevateZoom();
+
 
 });
