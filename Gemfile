@@ -27,6 +27,7 @@ gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
 gem 'stripe'
 
 gem 'angularjs-rails'
+gem 'dalli'
 # gem 'brakeman', '~> 3.2', '>= 3.2.1'
 
 # Brakeman

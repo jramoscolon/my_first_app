@@ -1,0 +1,46 @@
+<!-- <p id="notice"><%= notice %></p> -->
+
+<div class="container">
+  <h1>Custom Bikes</h1>
+  <div class="row">
+    <% @products.each do |product| %>
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="thumbnail">
+        <div>
+          <%= image_tag(product.image_url, :class => 'listing-img') %>
+        </div>
+        <div class="caption">
+          <h3><%= product.name %></h3>
+          <p><%= product.description %></p>
+          <p><%= product.colour %></p>
+          <hr>
+          <h4><%= number_to_currency(product.price.to_d/100) %></h4>
+          <p class="btn btn-default"><%= link_to 'Show', product %></p>
+          <% if can? :update, @product %>
+            <p class="btn btn-default"><%= link_to 'Edit', edit_product_path(product) %></p>
+          <% end %>
+          <% if can? :destroy, @product %>
+          <p class="btn btn-default"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+          <% end %>
+        </div><!-- End of caption class -->
+      </div><!-- End of thumbnail -->
+    </div><!-- End of column -->
+    <% end %>
+
+  </div><!-- End of row -->
+
+</div><!-- End of first container -->
+
+
+<br>
+<div class="container">
+  <% if can? :create, @product %>
+  <btn class="btn btn-default">
+    <%= link_to 'New Product', new_product_path %>
+  </btn>
+  <% end %>
+
+</div>
+
+
+
