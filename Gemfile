@@ -28,6 +28,7 @@ gem 'stripe'
 
 gem 'angularjs-rails'
 gem 'dalli'
+gem "redis-rails"
 # gem 'brakeman', '~> 3.2', '>= 3.2.1'
 
 # Brakeman
